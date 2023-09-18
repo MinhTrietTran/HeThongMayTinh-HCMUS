@@ -220,20 +220,19 @@ string ConvertToTwoComplement(int x)
 
 int main()
 {
-    /*
+    
     int wili;
     cout << "Nhap so nguyen co dau trong khoang -128 den 127: ";
     cin >> wili;
     cout << "Ket qua bang cach luong dau: " << ConvertToSignMagnitude(wili) << endl;
     //--------
-     */
-    /*
+
     int wilo;
     cout << "Nhap so nguyen co dau trong khoang -128 den 127: ";
     cin >> wilo;
     cout << "Ket qua bang cach bu 1: " << ConvertToOneComplement(wilo) << endl;
     //---------
-     */
+     
     int wilai;
     cout << "Nhap so nguyen co dau trong khoang -128 den 127: ";
     cin >> wilai;
