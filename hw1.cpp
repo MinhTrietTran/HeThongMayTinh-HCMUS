@@ -14,7 +14,7 @@ string Reverse(string& str)
     unsigned long n = str.length();
     for (int i = 0; i < n / 2; ++i)
     {
-        std::swap(str[i], str[n - i - 1]);
+        swap(str[i], str[n - i - 1]);
     }
     return str;
 }
@@ -220,26 +220,65 @@ string ConvertToTwoComplement(int x)
 
 int main()
 {
+    cout << "===Chuong trinh chuyen doi so nguyen co dau 8-bit sang dang nhi phan===";
+    cout << endl;
+    cout << "=== Phim 1: Phuong phap luong dau.                                  ===";
+    cout << endl;
+    cout << "=== Phim 2: Phuong phap bu 1.                                       ===";
+    cout << endl;
+    cout << "=== Phim 3: Phuong phap bu 2.                                       ===";
+    cout << endl;
+    cout << "=== Phim khac: Thoat chuong trinh.                                  ===";
+    cout << endl;
+    int choice = 4;
+    do
+    {
+        cout << endl;
+        cout << "Nhap lua chon: " ;
+        cin >> choice;
+        switch (choice)
+        {
+            case 0:
+            {
+                cout << "Ban chon thoat chuong trinh." << endl;
+                break;
+            }
+            case 1:
+            {
+                int wili;
+                cout << "Ban chon phuong phap luong dau." << endl;
+                cout << "Nhap so nguyen co dau trong khoang -128 den 127: ";
+                cin >> wili;
+                cout << "Ket qua bang cach luong dau: " << ConvertToSignMagnitude(wili) << endl;
+                break;
+            }
+            case 2:
+            {
+                int wilo;
+                cout << "Ban chon phuong phap bu 1." << endl;
+                cout << "Nhap so nguyen co dau trong khoang -128 den 127: ";
+                cin >> wilo;
+                cout << "Ket qua bang cach bu 1: " << ConvertToOneComplement(wilo) << endl;
+                break;
+            }
+            case 3:
+            {
+                int wilai;
+                cout << "Ban chon phuong phap bu 2." << endl;
+                cout << "Nhap so nguyen co dau trong khoang -128 den 127: ";
+                cin >> wilai;
+                cout << "Ket qua bang cach bu 2: " << ConvertToTwoComplement(wilai) << endl;
+                break;
+            }
+            default:
+            {
+                cout << "Lua chon khong hop le !" << endl;
+                break;
+            }
+        }
+    }
+    while (choice >= 1 && choice <= 3);
     
-    int wili;
-    cout << "Nhap so nguyen co dau trong khoang -128 den 127: ";
-    cin >> wili;
-    cout << "Ket qua bang cach luong dau: " << ConvertToSignMagnitude(wili) << endl;
-    //--------
 
-    int wilo;
-    cout << "Nhap so nguyen co dau trong khoang -128 den 127: ";
-    cin >> wilo;
-    cout << "Ket qua bang cach bu 1: " << ConvertToOneComplement(wilo) << endl;
-    //---------
-     
-    int wilai;
-    cout << "Nhap so nguyen co dau trong khoang -128 den 127: ";
-    cin >> wilai;
-    cout << "Ket qua bang cach bu 2: " << ConvertToTwoComplement(wilai) << endl;
-
-    
-    
-    
     return 0;
 }
