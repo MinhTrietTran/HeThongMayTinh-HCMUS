@@ -1,2 +1,2 @@
 # HeThongMayTinh-HCMUS
-Contains exercises in my class
+Contains exercises in class
